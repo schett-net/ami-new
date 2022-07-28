@@ -1,0 +1,32 @@
+{
+  "name": "ami",
+  "version": "0.0.0",
+  "description": "Projects of snek-at",
+  "repository": "https://github.com/snek-at/ami",
+  "author": "Nico Schett <52858351+schettn@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "commit": "cz"
+  },
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*",
+      "services/*"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "commitizen": "^4.2.5",
+    "git-cz": "^4.9.0",
+    "husky": "^8.0.1"
+  }
+}
