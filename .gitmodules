@@ -1,0 +1,6 @@
+[submodule "services/snek-0"]
+	path = services/snek-0
+	url = https://github.com/schett-net/snek-0
+[submodule "services/@snek-functions/template"]
+	path = services/@snek-functions/template
+	url = https://github.com/snek-functions/template
