@@ -13,7 +13,8 @@
     "packages": [
       "apps/*",
       "packages/*",
-      "services/*"
+      "services/*",
+      "services/@snek-functions/*"
     ]
   },
   "config": {
