@@ -1,6 +1,12 @@
-[submodule "services/snek-0"]
-	path = services/snek-0
-	url = https://github.com/schett-net/snek-0
 [submodule "services/@snek-functions/template"]
 	path = services/@snek-functions/template
 	url = https://github.com/snek-functions/template
+[submodule "services/@snek-functions/authentication"]
+	path = services/@snek-functions/authentication
+	url = https://github.com/snek-functions/authentication
+[submodule "services/@snek-functions/origin"]
+	path = services/@snek-functions/origin
+	url = https://github.com/snek-functions/origin
+[submodule "services/@snek-functions/log"]
+	path = services/@snek-functions/log
+	url = https://github.com/snek-functions/log
