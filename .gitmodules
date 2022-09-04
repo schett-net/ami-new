@@ -19,3 +19,9 @@
 [submodule "services/@snek-functions/email"]
 	path = services/@snek-functions/email
 	url = https://github.com/snek-functions/email.git
+[submodule "deployments/photonq/ansible"]
+	path = deployments/photonq/ansible
+	url = https://github.com/CDL-Uni-Vienna/photonq-ansible.git
+[submodule "services/photonq/cdl-django"]
+	path = services/photonq/cdl-django
+	url = https://github.com/CDL-Uni-Vienna/photonq-cdl-django.git
