@@ -613,9 +613,9 @@
   integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
 
 "@snek-at/functions@*":
-  version "0.0.57"
-  resolved "https://registry.yarnpkg.com/@snek-at/functions/-/functions-0.0.57.tgz#396aa6f5e957cb7963a54018e7167dff6c6751a6"
-  integrity sha512-bh+eLUhZE7uOK5IK3PFro9ljSurrjMfT2znt2Bu6zarZvEiQT5DW/EzptmeyRm6RkF32zIoOUrvRHETNcurWTw==
+  version "0.0.58"
+  resolved "https://registry.yarnpkg.com/@snek-at/functions/-/functions-0.0.58.tgz#ff444ab50658dc2292c7847f5a525d528fd0339e"
+  integrity sha512-EVQZfg2YtKayMCRsD2sjP0Oo6BySWUeeMThbPB7a5exMqrUwlU5rsRp0E3jTZMRVAQfFpPY2gPY0lSPtY/cnNg==
   dependencies:
     "@snek-at/functions" "^0.0.40"
     "@snek-at/snek-api-client" "*"
