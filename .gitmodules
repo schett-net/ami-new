@@ -10,3 +10,12 @@
 [submodule "services/@snek-functions/log"]
 	path = services/@snek-functions/log
 	url = https://github.com/snek-functions/log
+[submodule "services/@snek-functions/iam"]
+	path = services/@snek-functions/iam
+	url = https://github.com/snek-functions/iam.git
+[submodule "services/@snek-functions/registration"]
+	path = services/@snek-functions/registration
+	url = https://github.com/snek-functions/registration.git
+[submodule "services/@snek-functions/email"]
+	path = services/@snek-functions/email
+	url = https://github.com/snek-functions/email.git
