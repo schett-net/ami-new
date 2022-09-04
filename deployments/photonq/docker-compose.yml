@@ -1,0 +1,111 @@
+version: '3.1'
+
+services:
+  #> PostgreSQL
+  db:
+    image: postgres:14-alpine
+    environment:
+      - POSTGRES_DB=app_db
+      - POSTGRES_USER=app_user
+      - POSTGRES_PASSWORD=changeme
+      - POSTGRES_PORT=5432
+    restart: always
+
+  #> Origin
+  origin:
+    build:
+      context: ../../services/@snek-functions/origin
+    environment:
+      - ENDPOINT_URL=https://kleberbaum-schett-net-ami-new-vpwp4j6p4x4fw667-3010.githubpreview.dev/graphql
+    links:
+      - db:db
+    ports:
+      - '3010:4000/tcp'
+    depends_on:
+      - db
+
+  #> authenticaton
+  authenticaton:
+    build:
+      context: ../../services/@snek-functions/authentication
+    environment:
+      - ENDPOINT_URL=https://kleberbaum-schett-net-ami-new-vpwp4j6p4x4fw667-3020.githubpreview.dev/graphql
+    links:
+      - db:db
+    ports:
+      - '3020:4000/tcp'
+    depends_on:
+      - db
+    volumes:
+      - /mnt/floppy:/mnt/floppy
+
+  #> registration
+  registration:
+    build:
+      context: ../../services/@snek-functions/registration
+    environment:
+      - ENDPOINT_URL=https://kleberbaum-schett-net-ami-new-vpwp4j6p4x4fw667-3030.githubpreview.dev/graphql
+    links:
+      - db:db
+    ports:
+      - '3030:4000/tcp'
+    depends_on:
+      - db
+    volumes:
+      - /mnt/floppy:/mnt/floppy
+
+  #> email
+  email:
+    build:
+      context: ../../services/@snek-functions/email
+    environment:
+      - ENDPOINT_URL=https://kleberbaum-schett-net-ami-new-vpwp4j6p4x4fw667-3040.githubpreview.dev/graphql
+    links:
+      - db:db
+    ports:
+      - '3040:4000/tcp'
+    depends_on:
+      - db
+    volumes:
+      - /mnt/floppy:/mnt/floppy
+
+  #> IAM
+  iam:
+    build:
+      context: ../../services/@snek-functions/iam
+    environment:
+      - DJANGO_SECRET_KEY=changeme
+      - POSTGRES_HOST=db
+      - POSTGRES_DB=app_db
+      - POSTGRES_USER=app_user
+      - POSTGRES_PASSWORD=changeme
+      - POSTGRES_PORT=5432
+      - ENDPOINT_URL=https://kleberbaum-schett-net-ami-new-vpwp4j6p4x4fw667-2010.githubpreview.dev/graphql
+    links:
+      - db:db
+    ports:
+      - '2010:8000/tcp'
+    depends_on:
+      - db
+    volumes:
+      - /mnt/floppy:/mnt/floppy
+
+  #> CDL Django
+  cdl-django:
+    build:
+      context: ../../services/photonq/cdl-django
+    environment:
+      - DJANGO_SECRET_KEY=changeme
+      - POSTGRES_HOST=db
+      - POSTGRES_DB=app_db
+      - POSTGRES_USER=app_user
+      - POSTGRES_PASSWORD=changeme
+      - POSTGRES_PORT=5432
+    links:
+      - db:db
+    ports:
+      - '2020:8000/tcp'
+    depends_on:
+      - db
+# SPDX-License-Identifier: (EUPL-1.2)
+# Copyright © 2022 snek.at
