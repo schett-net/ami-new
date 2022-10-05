@@ -25,3 +25,6 @@
 [submodule "services/photonq/cdl-django"]
 	path = services/photonq/cdl-django
 	url = https://github.com/CDL-Uni-Vienna/photonq-cdl-django.git
+[submodule "packages/@snek-at/functions"]
+	path = packages/@snek-at/functions
+	url = https://github.com/snek-at/functions.git
