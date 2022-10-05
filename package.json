@@ -13,6 +13,7 @@
     "packages": [
       "apps/*",
       "packages/*",
+      "packages/@snek-at/*",
       "services/*",
       "services/@snek-functions/*"
     ]
