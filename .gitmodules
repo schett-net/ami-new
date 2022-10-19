@@ -28,3 +28,6 @@
 [submodule "packages/@snek-at/functions"]
 	path = packages/@snek-at/functions
 	url = https://github.com/snek-at/functions.git
+[submodule "apps/photonq-jaen"]
+	path = apps/photonq-jaen
+	url = https://github.com/CDL-Uni-Vienna/photonq-jaen
